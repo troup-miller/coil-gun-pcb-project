@@ -1,0 +1,9 @@
+{
+  "enabledMcpjsonServers": [
+    "kicad-happy",
+    "seeed-kicad-mcp"
+  ],
+  "enabledPlugins": {
+    "kicad-happy@kicad-happy": true
+  }
+}

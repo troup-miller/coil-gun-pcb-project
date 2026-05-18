@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "seeed-kicad-mcp": {
+      "command": "uvx",
+      "args": [
+        "--from",
+        "git+https://github.com/Seeed-Studio/kicad-mcp-server.git",
+        "kicad-mcp-server"
+      ]
+    }
+  }
+}

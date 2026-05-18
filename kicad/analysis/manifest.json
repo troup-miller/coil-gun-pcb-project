@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "project": "igbt_pcb.kicad_pro",
+  "current": "2026-05-17_1442",
+  "runs": {
+    "2026-05-17_1419": {
+      "source_hashes": {
+        "igbt_pcb.kicad_pcb": "sha256:5adac73e2d0f21a046679796d234ffd700b01cb01996fc8479a2b6bd6acb710f"
+      },
+      "outputs": {
+        "pcb": "pcb.json"
+      },
+      "scripts": {
+        "pcb": "analyze_pcb.py igbt_pcb.kicad_pcb"
+      },
+      "generated": "2026-05-17T14:19:56-05:00",
+      "pinned": false
+    },
+    "2026-05-17_1442": {
+      "source_hashes": {
+        "igbt_pcb.kicad_pcb": "sha256:3b699a0014b5acc5134f9b41de78c3296997299fedb0cc70e7a5a54bb451f6b5"
+      },
+      "outputs": {
+        "pcb": "pcb.json"
+      },
+      "scripts": {
+        "pcb": "analyze_pcb.py igbt_pcb.kicad_pcb"
+      },
+      "generated": "2026-05-17T15:24:09-05:00",
+      "pinned": false
+    }
+  }
+}

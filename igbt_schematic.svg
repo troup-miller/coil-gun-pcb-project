@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1700 1200" width="1700" height="1200" font-family="Helvetica,Arial,sans-serif">
+<style>.bg{fill:#fafafa}.wire{stroke:#000;stroke-width:2;fill:none;stroke-linecap:square}.wire-hv{stroke:#000;stroke-width:4;fill:none;stroke-linecap:square}.wire-iso{stroke:#bbb;stroke-width:1.5;fill:none;stroke-dasharray:8 4}.wire-int{stroke:#888;stroke-width:1.5;fill:none;stroke-dasharray:3 3}.box{fill:#fff;stroke:#000;stroke-width:2}.junc{fill:#000}.pin{fill:#000}.lbl{font-size:14px;fill:#000}.lbl-sm{font-size:11px;fill:#444}.net{font-size:13px;fill:#0050a0;font-weight:bold}.note{font-size:12px;fill:#700;font-style:italic}.title{font-size:20px;font-weight:bold}.zone{fill:none;stroke:#aaa;stroke-width:1;stroke-dasharray:4 4}.zlbl{font-size:13px;fill:#888;font-style:italic}</style>
+<rect class="bg" x="0" y="0" width="1700" height="1200"/>
+<text class="title" x="40" y="35" text-anchor="start">IGBT Low-Side Switching Circuit  —  MM75GAU65BKX driver schematic (rev C)</text>
+<text class="lbl-sm" x="40" y="58" text-anchor="start">Kelvin-Emitter and Power-Emitter are separate nets on the board; they meet ONLY inside the Q1 die.  Snubber spans Power-E and Collector only.  Gate pulldown and TVS span Gate and Kelvin-E only.</text>
+<rect class="zone" x="40" y="80" width="380" height="240"/>
+<text class="zlbl" x="48" y="98" text-anchor="start">A.  CONTROL INPUT  (RPi-side, optically isolated)</text>
+<rect class="zone" x="440" y="80" width="380" height="480"/>
+<text class="zlbl" x="448" y="98" text-anchor="start">B.  HCPL-3120 OPTOCOUPLER / GATE DRIVER</text>
+<rect class="zone" x="840" y="80" width="380" height="240"/>
+<text class="zlbl" x="848" y="98" text-anchor="start">C.  DRIVER POWER + DECOUPLING</text>
+<rect class="zone" x="440" y="580" width="380" height="220"/>
+<text class="zlbl" x="448" y="598" text-anchor="start">D.  GATE NETWORK  (Gate to Kelvin-E only)</text>
+<rect class="zone" x="840" y="340" width="380" height="240"/>
+<text class="zlbl" x="848" y="358" text-anchor="start">E.  SNUBBER  (Power-E to Collector only)</text>
+<rect class="zone" x="840" y="600" width="380" height="240"/>
+<text class="zlbl" x="848" y="618" text-anchor="start">F.  IGBT Q1</text>
+<rect class="zone" x="1240" y="340" width="440" height="500"/>
+<text class="zlbl" x="1248" y="358" text-anchor="start">G.  POWER LOOP  (Brake-R, FW diode, bus terminals)</text>
+<rect class="zone" x="40" y="860" width="1640" height="320"/>
+<text class="zlbl" x="48" y="878" text-anchor="start">H.  NET DICTIONARY  &amp;  ASSEMBLY NOTES</text>
+<circle cx="80" cy="160" r="9" fill="#fff" stroke="#000" stroke-width="2"/>
+<circle cx="80" cy="160" r="3" fill="#000"/>
+<text class="lbl-sm" x="94" y="156" text-anchor="start">RPi +3.3V</text>
+<text class="lbl-sm" x="94" y="170" text-anchor="start">GPIO</text>
+<circle cx="80" cy="220" r="9" fill="#fff" stroke="#000" stroke-width="2"/>
+<circle cx="80" cy="220" r="3" fill="#000"/>
+<text class="lbl-sm" x="94" y="216" text-anchor="start">RPi GND</text>
+<line class="wire" x1="89" y1="160" x2="130" y2="160"/>
+<line class="wire" x1="130" y1="160" x2="150.0" y2="160"/>
+<line class="wire" x1="210.0" y1="160" x2="230" y2="160"/>
+<polyline class="wire" points="150.0,160 156.0,167 168.0,153 180.0,167 192.0,153 204.0,167 210.0,160"/>
+<text class="lbl" x="180.0" y="146" text-anchor="middle">R_in</text>
+<text class="lbl-sm" x="180.0" y="178" text-anchor="middle">180 Ω, 1/4 W</text>
+<line class="wire" x1="230" y1="160" x2="460" y2="160"/>
+<line class="wire" x1="89" y1="220" x2="460" y2="220"/>
+<text class="net" x="280" y="152" text-anchor="start">LED_ANODE</text>
+<text class="net" x="280" y="212" text-anchor="start">INPUT_GND</text>
+<text class="lbl-sm" x="180" y="145" text-anchor="middle">+3.3 V → 9 mA into U1 P2</text>
+<rect class="box" x="460" y="100" width="220" height="360"/>
+<text class="lbl" x="570.0" y="124" text-anchor="middle">U1  HCPL-3120</text>
+<text class="lbl-sm" x="570.0" y="140" text-anchor="middle">Isolated gate driver</text>
+<text class="lbl-sm" x="570.0" y="154" text-anchor="middle">8-pin DIP, 2.5 A peak</text>
+<line class="wire-iso" x1="570.0" y1="114" x2="570.0" y2="446"/>
+<text class="lbl-sm" x="570.0" y="320" text-anchor="middle">ISOLATION</text>
+<text class="lbl-sm" x="570.0" y="334" text-anchor="middle">BARRIER</text>
+<circle class="pin" cx="460" cy="130" r="4"/>
+<text class="lbl-sm" x="452" y="134" text-anchor="end">P1 NC</text>
+<circle class="pin" cx="460" cy="160" r="4"/>
+<text class="lbl-sm" x="452" y="164" text-anchor="end">P2 Anode</text>
+<circle class="pin" cx="460" cy="220" r="4"/>
+<text class="lbl-sm" x="452" y="224" text-anchor="end">P3 Cathode</text>
+<circle class="pin" cx="460" cy="250" r="4"/>
+<text class="lbl-sm" x="452" y="254" text-anchor="end">P4 NC</text>
+<circle class="pin" cx="680" cy="130" r="4"/>
+<text class="lbl-sm" x="688" y="134" text-anchor="start">P8 Vcc</text>
+<circle class="pin" cx="680" cy="160" r="4"/>
+<text class="lbl-sm" x="688" y="164" text-anchor="start">P7 Vo</text>
+<circle class="pin" cx="680" cy="220" r="4"/>
+<text class="lbl-sm" x="688" y="224" text-anchor="start">P6 Vo</text>
+<circle class="pin" cx="680" cy="250" r="4"/>
+<text class="lbl-sm" x="688" y="254" text-anchor="start">P5 Vee</text>
+<line class="wire" x1="680" y1="130" x2="840" y2="130"/>
+<text class="net" x="820" y="122" text-anchor="end">→ VCC (+15V)</text>
+<line class="wire" x1="680" y1="160" x2="702" y2="160"/>
+<circle class="junc" cx="702" cy="160" r="3"/>
+<line class="wire" x1="680" y1="220" x2="702" y2="220"/>
+<circle class="junc" cx="702" cy="220" r="3"/>
+<line class="wire" x1="702" y1="160" x2="702" y2="220"/>
+<line class="wire" x1="702" y1="190" x2="718" y2="190"/>
+<circle class="junc" cx="702" cy="190" r="3"/>
+<text class="net" x="724" y="188" text-anchor="start">→ GATE_DRIVE_HOT  (P6 ⌃P7 tied)</text>
+<line class="wire" x1="680" y1="250" x2="840" y2="250"/>
+<text class="net" x="820" y="268" text-anchor="end">→ KELVIN_RETURN</text>
+<circle cx="880" cy="130" r="9" fill="#fff" stroke="#000" stroke-width="2"/>
+<circle cx="880" cy="130" r="3" fill="#000"/>
+<text class="lbl-sm" x="894" y="126" text-anchor="start">+15 V</text>
+<text class="lbl-sm" x="894" y="140" text-anchor="start">external isolated DC-DC</text>
+<circle cx="880" cy="250" r="9" fill="#fff" stroke="#000" stroke-width="2"/>
+<circle cx="880" cy="250" r="3" fill="#000"/>
+<text class="lbl-sm" x="894" y="246" text-anchor="start">Vee</text>
+<text class="lbl-sm" x="894" y="260" text-anchor="start">RETURNS TO KELVIN-E ONLY</text>
+<line class="wire" x1="889" y1="130" x2="1200" y2="130"/>
+<circle class="junc" cx="889" cy="130" r="3"/>
+<line class="wire" x1="889" y1="250" x2="1200" y2="250"/>
+<circle class="junc" cx="889" cy="250" r="3"/>
+<line class="wire" x1="1060" y1="130" x2="1060" y2="187.0"/>
+<line class="wire" x1="1050" y1="187.0" x2="1070" y2="187.0"/>
+<line class="wire" x1="1050" y1="193.0" x2="1070" y2="193.0"/>
+<line class="wire" x1="1060" y1="193.0" x2="1060" y2="250"/>
+<text class="lbl" x="1076" y="188.0" text-anchor="start">C_dcp1</text>
+<text class="lbl-sm" x="1076" y="202.0" text-anchor="start">0.1 µF X7R 25 V</text>
+<line class="wire" x1="1160" y1="130" x2="1160" y2="187.0"/>
+<line class="wire" x1="1150" y1="187.0" x2="1170" y2="187.0"/>
+<line class="wire" x1="1150" y1="193.0" x2="1170" y2="193.0"/>
+<line class="wire" x1="1160" y1="193.0" x2="1160" y2="250"/>
+<text class="lbl" x="1176" y="188.0" text-anchor="start">C_dcp2</text>
+<text class="lbl-sm" x="1176" y="202.0" text-anchor="start">10 µF X7R 25 V</text>
+<circle class="junc" cx="1060" cy="130" r="3"/>
+<circle class="junc" cx="1060" cy="250" r="3"/>
+<circle class="junc" cx="1160" cy="130" r="3"/>
+<circle class="junc" cx="1160" cy="250" r="3"/>
+<text class="note" x="845" y="300" text-anchor="start">PLACE both decap caps within 5 mm of U1 P8/P5.</text>
+<text class="note" x="845" y="314" text-anchor="start">Both caps return to KELVIN_RETURN — never to POWER_GROUND.</text>
+<line class="wire" x1="720" y1="190" x2="720" y2="620"/>
+<circle class="junc" cx="720" cy="190" r="3"/>
+<line class="wire" x1="702" y1="190" x2="720" y2="190"/>
+<circle class="junc" cx="720" cy="620" r="3"/>
+<text class="net" x="728" y="612" text-anchor="start">GATE_DRIVE_HOT</text>
+<line class="wire" x1="720" y1="620" x2="720" y2="640.0"/>
+<line class="wire" x1="720" y1="700.0" x2="720" y2="720"/>
+<polyline class="wire" points="720,640.0 727,646.0 713,658.0 727,670.0 713,682.0 727,694.0 720,700.0"/>
+<text class="lbl" x="734" y="665.0" text-anchor="start">R_gate</text>
+<text class="lbl-sm" x="734" y="680.0" text-anchor="start">10 Ω, 2 W</text>
+<circle class="junc" cx="720" cy="720" r="3"/>
+<line class="wire" x1="620" y1="720" x2="620" y2="728.0"/>
+<line class="wire" x1="620" y1="752.0" x2="620" y2="760"/>
+<polyline class="wire" points="620,728.0 627,730.4 613,735.2 627,740.0 613,744.8 627,749.6 620,752.0"/>
+<text class="lbl" x="606" y="735.0" text-anchor="end">R_ge</text>
+<text class="lbl-sm" x="606" y="750.0" text-anchor="end">1.5 kΩ 1 W</text>
+<line class="wire" x1="670" y1="720" x2="670" y2="731.0"/>
+<polygon class="box" points="661,731.0 679,731.0 670,738.0" fill="#fff" stroke="#000" stroke-width="2"/>
+<polygon class="box" points="661,749.0 679,749.0 670,742.0" fill="#fff" stroke="#000" stroke-width="2"/>
+<line class="wire" x1="661" y1="738.0" x2="679" y2="738.0"/>
+<line class="wire" x1="661" y1="742.0" x2="679" y2="742.0"/>
+<line class="wire" x1="670" y1="749.0" x2="670" y2="760"/>
+<text class="lbl" x="686" y="736.0" text-anchor="start">TVS</text>
+<text class="lbl-sm" x="686" y="751.0" text-anchor="start">SMBJ18CA bidi</text>
+<line class="wire" x1="620" y1="720" x2="720" y2="720"/>
+<circle class="junc" cx="620" cy="720" r="3"/>
+<circle class="junc" cx="670" cy="720" r="3"/>
+<circle class="junc" cx="720" cy="720" r="3"/>
+<line class="wire" x1="720" y1="720" x2="840" y2="720"/>
+<text class="net" x="840" y="712" text-anchor="start">→ Q1 P1 (Gate)</text>
+<line class="wire" x1="620" y1="760" x2="720" y2="760"/>
+<circle class="junc" cx="620" cy="760" r="3"/>
+<circle class="junc" cx="670" cy="760" r="3"/>
+<line class="wire" x1="440" y1="250" x2="840" y2="250"/>
+<circle class="junc" cx="440" cy="250" r="3"/>
+<line class="wire" x1="440" y1="250" x2="440" y2="760"/>
+<line class="wire" x1="440" y1="760" x2="620" y2="760"/>
+<circle class="junc" cx="440" cy="760" r="3"/>
+<line class="wire" x1="720" y1="760" x2="840" y2="760"/>
+<text class="net" x="840" y="752" text-anchor="start">→ Q1 P2 (Kelvin-E)</text>
+<rect class="box" x="840" y="600" width="380" height="240"/>
+<text class="lbl" x="1030.0" y="624" text-anchor="middle">Q1  IGBT</text>
+<text class="lbl-sm" x="1030.0" y="640" text-anchor="middle">MM75GAU65BKX  (TO-247-4)</text>
+<text class="lbl-sm" x="1030.0" y="656" text-anchor="middle">75 A • 650 V • SiC, 4-pin Kelvin source</text>
+<circle class="pin" cx="840" cy="720" r="4"/>
+<text class="lbl-sm" x="848" y="714" text-anchor="start">P1 Gate</text>
+<circle class="pin" cx="840" cy="760" r="4"/>
+<text class="lbl-sm" x="848" y="754" text-anchor="start">P2 Kelvin-E</text>
+<circle class="pin" cx="840" cy="790" r="4"/>
+<text class="lbl-sm" x="848" y="784" text-anchor="start">P3 Power-E</text>
+<circle class="pin" cx="840" cy="820" r="4"/>
+<text class="lbl-sm" x="848" y="814" text-anchor="start">P4 Collector</text>
+<line class="wire-hv" x1="1060.0" y1="690" x2="1060.0" y2="775"/>
+<line class="wire" x1="1030.0" y1="710" x2="1056.0" y2="710"/>
+<line class="wire" x1="1056.0" y1="700" x2="1056.0" y2="720"/>
+<text class="lbl-sm" x="1045.0" y="705" text-anchor="end">G</text>
+<polygon points="1053.0,765 1067.0,765 1060.0,775" fill="#000"/>
+<text class="lbl-sm" x="1072.0" y="770" text-anchor="start">E (die)</text>
+<text class="lbl-sm" x="1072.0" y="690" text-anchor="start">C</text>
+<line class="wire-int" x1="844" y1="720" x2="1056.0" y2="710"/>
+<line class="wire-int" x1="844" y1="760" x2="1060.0" y2="765"/>
+<line class="wire-int" x1="844" y1="790" x2="1060.0" y2="775"/>
+<line class="wire-int" x1="844" y1="820" x2="1060.0" y2="690"/>
+<text class="lbl-sm" x="1208" y="800" text-anchor="end">both emitter pins join</text>
+<text class="lbl-sm" x="1208" y="814" text-anchor="end">ONLY inside the die →</text>
+<line class="wire-hv" x1="1220" y1="790" x2="1100" y2="790"/>
+<text class="net" x="1110" y="784" text-anchor="start">→ POWER_GROUND</text>
+<line class="wire-hv" x1="1220" y1="820" x2="1100" y2="820"/>
+<text class="net" x="1110" y="814" text-anchor="start">→ COLLECTOR</text>
+<line class="wire" x1="960" y1="400" x2="960" y2="437.0"/>
+<line class="wire" x1="950" y1="437.0" x2="970" y2="437.0"/>
+<line class="wire" x1="950" y1="443.0" x2="970" y2="443.0"/>
+<line class="wire" x1="960" y1="443.0" x2="960" y2="480"/>
+<text class="lbl" x="976" y="438.0" text-anchor="start">C_snub</text>
+<text class="lbl-sm" x="976" y="452.0" text-anchor="start">0.47 µF, 600 V pulse</text>
+<line class="wire" x1="1080" y1="400" x2="1080" y2="416.0"/>
+<line class="wire" x1="1080" y1="464.0" x2="1080" y2="480"/>
+<polyline class="wire" points="1080,416.0 1087,420.8 1073,430.4 1087,440.0 1073,449.6 1087,459.2 1080,464.0"/>
+<text class="lbl" x="1094" y="435.0" text-anchor="start">R_snub</text>
+<text class="lbl-sm" x="1094" y="450.0" text-anchor="start">20 Ω MP930</text>
+<line class="wire" x1="960" y1="400" x2="1080" y2="400"/>
+<circle class="junc" cx="960" cy="400" r="3"/>
+<circle class="junc" cx="1080" cy="400" r="3"/>
+<text class="net" x="1020" y="392" text-anchor="middle">SNUB_INTERMEDIATE  (hidden HF node)</text>
+<line class="wire-hv" x1="960" y1="480" x2="960" y2="870"/>
+<line class="wire-hv" x1="1080" y1="480" x2="1080" y2="820"/>
+<circle class="junc" cx="1080" cy="820" r="3"/>
+<text class="note" x="845" y="540" text-anchor="start">Snubber loop area target &lt; 2 cm²</text>
+<text class="note" x="845" y="555" text-anchor="start">Mount C_snub directly across Q1 P3/P4</text>
+<text class="note" x="845" y="570" text-anchor="start">(NEVER tie to Kelvin-E here)</text>
+<line class="wire-hv" x1="1100" y1="820" x2="1290" y2="820"/>
+<text class="net" x="1190" y="812" text-anchor="middle">COLLECTOR rail</text>
+<line class="wire" x1="1290" y1="820" x2="1310.0" y2="820"/>
+<line class="wire" x1="1370.0" y1="820" x2="1390" y2="820"/>
+<polyline class="wire" points="1310.0,820 1316.0,827 1328.0,813 1340.0,827 1352.0,813 1364.0,827 1370.0,820"/>
+<text class="lbl" x="1340.0" y="806" text-anchor="middle">R_brake</text>
+<text class="lbl-sm" x="1340.0" y="838" text-anchor="middle">optional / bus-bar jumper</text>
+<line class="wire-hv" x1="1390" y1="820" x2="1450" y2="820"/>
+<text class="net" x="1435" y="812" text-anchor="end">FLYBACK_HIGH</text>
+<rect class="box" x="1450.0" y="580" width="100" height="80" fill="#fff"/>
+<text class="lbl" x="1500" y="598" text-anchor="middle">D_fly</text>
+<text class="lbl-sm" x="1500" y="614" text-anchor="middle">C3D30065D</text>
+<text class="lbl-sm" x="1500" y="628" text-anchor="middle">TO-220  A-K-A</text>
+<text class="lbl-sm" x="1500" y="642" text-anchor="middle">650 V • 30 A • SiC</text>
+<circle class="pin" cx="1468" cy="660" r="4"/>
+<circle class="pin" cx="1500"  cy="660" r="4"/>
+<circle class="pin" cx="1532" cy="660" r="4"/>
+<text class="lbl-sm" x="1468" y="676" text-anchor="middle">Pin 1 A</text>
+<text class="lbl-sm" x="1500" y="676" text-anchor="middle">Pin 2 K</text>
+<text class="lbl-sm" x="1532" y="676" text-anchor="middle">Pin 3 A</text>
+<polygon class="box" points="1493,602 1507,602 1500,590" fill="#fff" stroke="#000" stroke-width="2"/>
+<line class="wire" x1="1491" y1="590" x2="1509" y2="590"/>
+<text class="lbl-sm" x="1488" y="590" text-anchor="end">K</text>
+<text class="lbl-sm" x="1488" y="605" text-anchor="end">A</text>
+<line class="wire-int" x1="1468" y1="656" x2="1468" y2="602"/>
+<line class="wire-int" x1="1468" y1="602" x2="1493" y2="602"/>
+<line class="wire-int" x1="1532" y1="656" x2="1532" y2="602"/>
+<line class="wire-int" x1="1532" y1="602" x2="1507" y2="602"/>
+<line class="wire-int" x1="1500" y1="656" x2="1500" y2="590"/>
+<line class="wire-hv" x1="1500" y1="660" x2="1500" y2="820"/>
+<circle class="junc" cx="1500" cy="820" r="3"/>
+<line class="wire-hv" x1="1468" y1="660" x2="1468" y2="870"/>
+<line class="wire-hv" x1="1532" y1="660" x2="1532" y2="870"/>
+<circle class="junc" cx="1468" cy="870" r="3"/>
+<circle class="junc" cx="1532" cy="870" r="3"/>
+<line class="wire-hv" x1="890" y1="870" x2="1660" y2="870"/>
+<text class="net" x="950" y="862" text-anchor="start">POWER_GROUND  (heavy 16 AWG)</text>
+<line class="wire-hv" x1="1100" y1="790" x2="1100" y2="870"/>
+<circle class="junc" cx="1100" cy="870" r="3"/>
+<circle cx="1620" cy="820" r="9" fill="#fff" stroke="#000" stroke-width="2"/>
+<circle cx="1620" cy="820" r="3" fill="#000"/>
+<text class="lbl-sm" x="1634" y="816" text-anchor="start">Load− 16AWG</text>
+<text class="lbl-sm" x="1634" y="830" text-anchor="start">from coil (−) end</text>
+<line class="wire-hv" x1="1450" y1="820" x2="1611" y2="820"/>
+<circle cx="1620" cy="870" r="9" fill="#fff" stroke="#000" stroke-width="2"/>
+<circle cx="1620" cy="870" r="3" fill="#000"/>
+<text class="lbl-sm" x="1634" y="866" text-anchor="start">PSU− 16AWG</text>
+<text class="lbl-sm" x="1634" y="880" text-anchor="start">Cap-bank (−)</text>
+<text class="lbl" x="60" y="888" text-anchor="start">Net dictionary</text>
+<text class="lbl-sm" x="60" y="910" text-anchor="start">Net</text>
+<text class="lbl-sm" x="210" y="910" text-anchor="start">Connects (pin list)</text>
+<text class="lbl-sm" x="760" y="910" text-anchor="start">Current</text>
+<text class="net" x="60" y="930" text-anchor="start">INPUT_VPLUS</text>
+<text class="lbl-sm" x="210" y="930" text-anchor="start">+3.3 V from RPi GPIO</text>
+<text class="lbl-sm" x="760" y="930" text-anchor="start">≤10 mA</text>
+<text class="net" x="60" y="948" text-anchor="start">INPUT_GND</text>
+<text class="lbl-sm" x="210" y="948" text-anchor="start">RPi GND return</text>
+<text class="lbl-sm" x="760" y="948" text-anchor="start">≤10 mA</text>
+<text class="net" x="60" y="966" text-anchor="start">LED_ANODE</text>
+<text class="lbl-sm" x="210" y="966" text-anchor="start">R_in pin 2 → U1 P2</text>
+<text class="lbl-sm" x="760" y="966" text-anchor="start">~9 mA</text>
+<text class="net" x="60" y="984" text-anchor="start">VCC</text>
+<text class="lbl-sm" x="210" y="984" text-anchor="start">+15 V rail, U1 P8, both decap top pins</text>
+<text class="lbl-sm" x="760" y="984" text-anchor="start">~150 mA peak</text>
+<text class="net" x="60" y="1002" text-anchor="start">KELVIN_RETURN</text>
+<text class="lbl-sm" x="210" y="1002" text-anchor="start">Vee, U1 P5, decap bot pins, R_ge bot, TVS bot, Q1 P2</text>
+<text class="lbl-sm" x="760" y="1002" text-anchor="start">≤150 mA</text>
+<text class="net" x="60" y="1020" text-anchor="start">GATE_DRIVE_HOT</text>
+<text class="lbl-sm" x="210" y="1020" text-anchor="start">U1 P6/P7 tie → R_gate top</text>
+<text class="lbl-sm" x="760" y="1020" text-anchor="start">2.5 A transient</text>
+<text class="net" x="60" y="1038" text-anchor="start">GATE</text>
+<text class="lbl-sm" x="210" y="1038" text-anchor="start">R_gate bot, R_ge top, TVS top, Q1 P1</text>
+<text class="lbl-sm" x="760" y="1038" text-anchor="start">2.5 A transient</text>
+<text class="net" x="60" y="1056" text-anchor="start">POWER_GROUND</text>
+<text class="lbl-sm" x="210" y="1056" text-anchor="start">PSU(−) 16AWG, Q1 P3, C_snub bot, D_fly P1 &amp; P3</text>
+<text class="lbl-sm" x="760" y="1056" text-anchor="start">≤75 A</text>
+<text class="net" x="60" y="1074" text-anchor="start">COLLECTOR</text>
+<text class="lbl-sm" x="210" y="1074" text-anchor="start">Q1 P4, R_snub bot, R_brake L</text>
+<text class="lbl-sm" x="760" y="1074" text-anchor="start">0..650 V swing</text>
+<text class="net" x="60" y="1092" text-anchor="start">SNUB_INTERMEDIATE</text>
+<text class="lbl-sm" x="210" y="1092" text-anchor="start">R_snub top + C_snub top</text>
+<text class="lbl-sm" x="760" y="1092" text-anchor="start">fast transients</text>
+<text class="net" x="60" y="1110" text-anchor="start">FLYBACK_HIGH</text>
+<text class="lbl-sm" x="210" y="1110" text-anchor="start">R_brake R, D_fly P2 (K), Load(−) 16AWG</text>
+<text class="lbl-sm" x="760" y="1110" text-anchor="start">≤75 A on freewheel</text>
+<text class="lbl-sm" x="950" y="910" text-anchor="start">Layout / assembly rules</text>
+<text class="lbl-sm" x="950" y="930" text-anchor="start">1. Kelvin-E and Power-E NEVER tie outside the die.</text>
+<text class="lbl-sm" x="950" y="948" text-anchor="start">2. Driver decap caps within 5 mm of U1 P8/P5.</text>
+<text class="lbl-sm" x="950" y="966" text-anchor="start">3. Twisted pair from U1 P6/P7 + P5 down to Q1 area.</text>
+<text class="lbl-sm" x="950" y="984" text-anchor="start">4. C_snub straddles Q1 P3 ⌃ P4 directly (loop area &lt; 2 cm²).</text>
+<text class="lbl-sm" x="950" y="1002" text-anchor="start">5. R_snub immediately adjacent to C_snub.</text>
+<text class="lbl-sm" x="950" y="1020" text-anchor="start">6. Bottom layer: continuous POWER_GROUND pour, 2 oz copper.</text>
+<text class="lbl-sm" x="950" y="1038" text-anchor="start">7. D_fly close to Q1; both anode pins (P1 + P3) tied to PGND.</text>
+<text class="lbl-sm" x="950" y="1056" text-anchor="start">8. R_brake pads spaced for resistor OR bus-bar jumper.</text>
+<text class="lbl-sm" x="950" y="1074" text-anchor="start">9. Test-point through-holes (0.9 mm) in +/- pairs.</text>
+<text class="lbl-sm" x="950" y="1092" text-anchor="start">10. ≥ 0.5 mm clearance between any two non-GND nets.</text>
+<text class="lbl-sm" x="950" y="1110" text-anchor="start">11. ≥ 0.25 mm annular ring on every through-hole.</text>
+</svg>
